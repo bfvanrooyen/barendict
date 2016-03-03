@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  django:
+    image: barendict/django:latest
+    ports:
+     - "80"
+    volumes:
+     - ./barendict/:/app
+    command: bash -c "/app/start_dev.sh"
+  postgresql:
+    image: barendict/postgresql:latest
